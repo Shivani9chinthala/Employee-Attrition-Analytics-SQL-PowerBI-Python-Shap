@@ -1,76 +1,142 @@
-# churn_prediction_shap
-"Employee Churn Prediction with Explainable AI (SHAP)"
-# 🧑‍💼 Employee Churn Prediction with Explainable AI (SHAP)
+# 🧑‍💼 HR Attrition Analytics Dashboard with Explainable AI (SHAP)
 
 ## 📌 Project Overview
-Employee churn (attrition) is a major challenge for organizations.  
-This project builds a **machine learning model** to predict employee churn and uses **SHAP (SHapley Additive exPlanations)** to make the predictions **interpretable** for HR decision-making.  
+Employee attrition is a critical challenge for organizations, impacting productivity and costs.  
+This project combines SQL, Python, Machine Learning, SHAP, and Power BI to analyze, predict, and visualize employee attrition.
+
+The goal is to:
+- Understand why employees leave  
+- Predict which employees are likely to leave  
+- Provide interactive dashboards for HR decision-making  
+
+---
 
 ## 🎯 Objectives
-- Predict whether an employee is likely to leave (churn).
-- Identify **key factors driving churn** using explainable AI.
-- Provide **global insights** (which features matter most overall).
-- Provide **local insights** (why a specific employee might leave).
+- Analyze employee attrition patterns using SQL & Python  
+- Build a machine learning model to predict attrition  
+- Use SHAP (Explainable AI) to interpret model predictions  
+- Create an interactive Power BI dashboard for insights  
+- Identify high-risk employees and key drivers of attrition  
 
 ---
 
-## ⚙️ Workflow
-1. **Data Preprocessing**  
-   - Handle missing values  
-   - Encode categorical variables  
-   - Scale numerical features  
+## ⚙️ End-to-End Workflow
 
-2. **Model Training**  
-   - Trained with [your chosen model, e.g., XGBoost / RandomForest].  
-   - Evaluated with accuracy, precision, recall, F1-score, ROC-AUC.  
-
-3. **Explainability with SHAP**  
-   - **Global explanations**: Feature importance across all employees.  
-   - **Local explanations**: Why a single employee is predicted to churn.  
+### 🔹 1. Data Analysis using SQL
+- Performed data exploration using SQL queries  
+- Analyzed attrition by department, job role, salary band, and age group  
+- Extracted insights for further analysis  
 
 ---
 
-## 📊 Key Visuals
+### 🔹 2. Data Preprocessing (Python)
+- Handled missing values  
+- Encoded categorical variables  
+- Scaled numerical features  
+- Prepared dataset for modeling  
 
-### 🔹 Global Feature Importance (SHAP Beeswarm Plot)
+---
 
-/<img width="866" height="497" alt="shap_beeswarm" src="https://github.com/user-attachments/assets/691b708f-8ae0-4d69-a3ab-ff003f63a198" />
+### 🔹 3. Exploratory Data Analysis (EDA)
+- Used Pandas, Matplotlib, and Seaborn  
+- Analyzed:
+  - Attrition vs Salary  
+  - Attrition vs Job Role  
+  - Attrition vs Overtime  
+- Identified patterns and correlations  
 
+---
 
-**The SHAP Beeswarm Plot shows which features have the highest overall impact on predicting employee attrition.
+### 🔹 4. Machine Learning Model
+- Built classification model using Random Forest / XGBoost  
+- Evaluated using:
+  - Accuracy  
+  - Precision  
+  - Recall  
+  - F1-score  
+  - ROC-AUC  
 
+---
 
-*OverTime, TotalWorkingYears, and YearsAtCompany were among the most influential.
+### 🔹 5. Explainable AI with SHAP
+- Implemented SHAP (SHapley Additive Explanations)  
+- Generated:
+  - Global Feature Importance (Beeswarm Plot)  
+  - Local Explanations (Force Plot)  
 
-*Red = pushes towards higher attrition probability
+Insights:
+- OverTime, MonthlyIncome, and JobRole are key drivers  
+- Helps explain why employees are predicted to leave  
 
-*Blue = pushes towards lower attrition probability
+---
 
-### 🔹 Local Explanation (Force Plot Example)
+### 🔹 6. Power BI Dashboard
+- Connected processed data to Power BI  
+- Built interactive dashboard with:
+  - KPI Cards (Total Employees, Attrition Rate, Attrition Count)  
+  - Slicers (Department, Gender, Age Group)  
+  - Charts:
+    - Attrition by Department  
+    - Attrition by Salary Band  
+    - Attrition by Job Role  
 
-<img width="860" height="180" alt="shap_froce_example" src="https://github.com/user-attachments/assets/7ccb76ab-3d53-4529-9924-549440df4388" />
+- Designed dashboard for HR decision-making  
 
+---
 
-**The SHAP Force Plot breaks down why the model predicted attrition for one employee:
+## 📊 Key Features
+- End-to-end workflow (SQL → Python → ML → SHAP → Power BI)  
+- Combines data analysis, machine learning, and visualization  
+- Provides predictive and explainable insights  
 
-*Positive (red) features increase the likelihood of attrition.
-*Negative (blue) features decrease it.
-
-This helps HR teams understand individual risk factors behind predictions.
 ---
 
 ## 🛠️ Tech Stack
-- **Python**
-- **Pandas / NumPy**
-- **Scikit-learn**
-- **XGBoost / RandomForest**
-- **SHAP**
-- **Matplotlib / Seaborn**
+- SQL  
+- Python  
+- Pandas / NumPy  
+- Scikit-learn / XGBoost  
+- SHAP  
+- Matplotlib / Seaborn  
+- Power BI  
+
+---
+
+## 📊 Dashboard Preview
+![HR Dashboard](./hr-dashboard.png)
 
 ---
 
 ## 🚀 How to Run
-Clone the repository:
+
 ```bash
-git clone https://github.com/your-username/churn-prediction-shap.git
-cd churn-prediction-shap
+git clone https://github.com/your-username/hr-attrition-analytics.git
+cd hr-attrition-analytics
+```
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+Run the notebook:
+```bash
+jupyter notebook
+```
+
+---
+
+## 💡 Business Impact
+- Helps HR teams identify high attrition risk employees  
+- Supports data-driven HR decisions  
+- Improves employee retention strategies  
+
+---
+
+## 🔗 Project Links
+- GitHub Repository: https://github.com/Shivani9chinthala/Employee-Attrition-Analytics-SQL-PowerBI-Python-Shap  
+
+---
+
+## 👤 Author
+Shivani Chinthala
