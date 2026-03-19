@@ -103,7 +103,7 @@ Insights:
 ---
 
 ## 📊 Dashboard Preview
-![HR Dashboard](./hr-dashboard.png)
+![HR Dashboard](./(https://github.com/Shivani9chinthala/Employee-Attrition-Analytics-SQL-PowerBI-Python-Shap/blob/main/Screenshot%202026-03-18%20194759.png))
 
 ---
 
